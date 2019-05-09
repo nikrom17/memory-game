@@ -104,6 +104,7 @@ const flipCardUp = (node) => {
         node = node.path[1];
     } else {
         node = node.target;
+    }
     
     //make sure face down cards clicked and only 2 cards max are face up
     if (node.className !== 'card open show' && openCards.length < 2) {
