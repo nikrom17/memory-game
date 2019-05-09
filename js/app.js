@@ -25,6 +25,7 @@ function shuffle(array) {
 
     return array;
 }
+
 const convertTime = () => {
     let timeDiff = Math.floor((new Date() - startTime) / 1000);
         
@@ -50,14 +51,12 @@ const timerLoop = () => {
         displayString = 'Timer: 0:0:0'
     }
     document.getElementById('timer').innerHTML = displayString;
-    
   }
 
-const startTimer = () =>{
+const startTimer = () => {
     if (!startTime) {
         startTime = new Date();
         timerLoop();
-
     }
 }
 
@@ -84,8 +83,8 @@ const compareCards = () => {
     updateMoves(++moves);
     const card1 = openCards[0].firstElementChild.className;
     const card2 = openCards[1].firstElementChild.className;
+    //compare icon class names
     if (card1 === card2) {
-        console.log('match');
         matches++;
         if (matches === 8) {
             let endTime = new Date(); 
@@ -105,7 +104,7 @@ const flipCardUp = (node) => {
         node = node.path[1];
     } else {
         node = node.target;
-    }
+    
     //make sure face down cards clicked and only 2 cards max are face up
     if (node.className !== 'card open show' && openCards.length < 2) {
         node.classList.add("open", "show");
@@ -166,15 +165,3 @@ const addResetListener = () => {
 
 shuffleCards();
 addResetListener();
-
-/*
- * set up the event listener for a card. If a card is clicked:
- *  - display the card's symbol (put this functionality in another function that you call from this one)
- *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
- *  - if the list already has another card, check to see if the two cards match
- *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
- *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
- *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
- *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
- */
-
