@@ -10,6 +10,14 @@
 </head>
 <body>
 
+    <div id="modal">
+        <div id="modalText">
+            <p>Congratulations, you won!</p>
+            <p>With <span id="movesScore">0</span> moves and <span id="starScore">3</span> stars in <span id='timeScore'>0:0:0</span></p>
+            <button id="playAgain" onclick="">Play Again</button>
+        </div>
+    </div>
+
     <div class="container">
         <header>
             <h1>Matching Game</h1>
@@ -22,7 +30,9 @@
         		<li><i class="fa fa-star"></i></li>
         	</ul>
 
-        	<span class="moves">3</span> Moves
+            <span id="moves">0</span> Moves
+            
+            <span id="timer">Timer: 0:0:0</span>
 
             <div class="restart">
         		<i class="fa fa-repeat"></i>
@@ -36,7 +46,7 @@
             <li class="card">
                 <i class="fa fa-paper-plane-o"></i>
             </li>
-            <li class="card match">
+            <li class="card">
                 <i class="fa fa-anchor"></i>
             </li>
             <li class="card">
@@ -45,7 +55,7 @@
             <li class="card">
                 <i class="fa fa-cube"></i>
             </li>
-            <li class="card match">
+            <li class="card">
                 <i class="fa fa-anchor"></i>
             </li>
             <li class="card">
@@ -66,7 +76,7 @@
             <li class="card">
                 <i class="fa fa-bomb"></i>
             </li>
-            <li class="card open show">
+            <li class="card">
                 <i class="fa fa-bolt"></i>
             </li>
             <li class="card">

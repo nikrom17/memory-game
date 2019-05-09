@@ -69,6 +69,7 @@ h1 {
     transform: rotateY(0);
     background: #02b3e4;
     cursor: default;
+    transition: 1s;
 }
 
 .deck .card.show {
@@ -95,7 +96,7 @@ h1 {
     margin: 0;
     padding: 0;
     display: inline-block;
-    margin: 0 5px 0 0;
+    margin: 0 10px 0 0;
 }
 
 .score-panel .stars li {
@@ -107,3 +108,35 @@ h1 {
     float: right;
     cursor: pointer;
 }
+
+#timer {
+    margin: 0 10px;
+}
+
+/*
+ * Styles for modal
+ */
+
+ #modal {
+    display: none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0, 0.5);
+    z-index: 5;
+ }
+
+ #modalText {
+    position: absolute;
+    background: white;
+    display: none;
+    width: 275px;
+    height: 135px;
+    border-radius: 5px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -70%);
+    transform: translate(-50%, -70%);
+    text-align: center;
+    z-index: 6;
+ }
