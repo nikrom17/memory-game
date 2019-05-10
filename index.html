@@ -1,19 +1,23 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <title>Matching Game</title>
     <meta name="description" content="">
     <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
     <link rel="stylesheet" href="css/app.css">
 </head>
+
 <body>
 
     <div id="modal">
         <div id="modalText">
             <p>Congratulations, you won!</p>
-            <p>With <span id="movesScore">0</span> moves and <span id="starScore">3</span> stars in <span id='timeScore'>0:0:0</span></p>
+            <p>With <span id="movesScore">0</span> moves and <span id="starScore">3</span> stars in <span
+                    id='timeScore'>0:0:0</span></p>
             <button id="playAgain" onclick="">Play Again</button>
         </div>
     </div>
@@ -24,19 +28,19 @@
         </header>
 
         <section class="score-panel">
-        	<ul class="stars">
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        		<li><i class="fa fa-star"></i></li>
-        	</ul>
+            <ul class="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
 
             <span id="moves">0</span> Moves
-            
+
             <span id="timer">Timer: 0:0:0</span>
 
             <div class="restart">
-        		<i class="fa fa-repeat"></i>
-        	</div>
+                <i class="fa fa-repeat"></i>
+            </div>
         </section>
 
         <ul class="deck">
@@ -93,4 +97,5 @@
 
     <script src="js/app.js"></script>
 </body>
+
 </html>
